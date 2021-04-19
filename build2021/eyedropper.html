@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/2021/04/Surface-Laptop-4-4-768x576.jpg" />
+        <br><br>
+        <button id="eyedropper">Pick a color</button>
+        <br><br>
+        <p style="font-family: sans-serif; font-size: 10pt">Selected color:</p>
+        <div id="colorselected" style="width: 100px; height: 100px; border:1px solid black"></div>
+    </body>
+    <script>
+        let eyeDropper = new EyeDropper();
+
+        let button = document.getElementById('eyedropper');
+        button.addEventListener('click', e => {
+            eyeDropper.open();
+        });
+
+        eyeDropper.addEventListener('colorselect', e=> {
+            console.log(e.value);
+            document.getElementById('colorselected').style.backgroundColor = e.value;
+
+            eyeDropper.close();
+        });
+    </script>
+</html>
