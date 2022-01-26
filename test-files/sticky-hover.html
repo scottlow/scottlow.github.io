@@ -30,6 +30,12 @@
         </div>
     </li>
     <li>
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + onClick in Menu</a>
+        <div>
+            <span style="cursor: pointer" onclick="doSomething()">Click Me</span>
+        </div>
+    </li>    
+    <li>
         <a aria-haspopup="true" href="https://www.bing.com">Anchor + No Anchor in Menu</a>
         <div>
         </div>
@@ -45,6 +51,13 @@
         <div>
         </div>
     </li>
+
+<script>
+    function doSomething() {
+        alert("Did something");
+    }
+</script>
+
 </body>
 
 </html>
