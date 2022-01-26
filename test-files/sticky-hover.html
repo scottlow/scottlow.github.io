@@ -28,18 +28,24 @@
         <div>
             <a href="https://www.bing.com">Click Me</a>
         </div>
+    </li>  
+    <li>
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + No Anchor in Menu</a>
+        <div>
+        </div>
     </li>
     <li>
         <a aria-haspopup="true" href="https://www.bing.com">Anchor + onClick in Menu</a>
         <div>
             <span style="cursor: pointer" onclick="doSomething()">Click Me</span>
         </div>
-    </li>    
+    </li>  
     <li>
-        <a aria-haspopup="true" href="https://www.bing.com">Anchor + No Anchor in Menu</a>
+        <span style="cursor: pointer" onclick="goSomewhere()" aria-haspopup="true">onClick + onClick in Menu</a>
         <div>
+            <span style="cursor: pointer" onclick="doSomething()">Click Me</span>
         </div>
-    </li>
+    </li>          
     <li>
         <span aria-haspopup="true">Span + Anchor in Menu</span>
         <div>
@@ -53,6 +59,10 @@
     </li>
 
 <script>
+    function goSomewhere() {
+        window.location = "https://www.bing.com"
+    }
+
     function doSomething() {
         alert("Did something");
     }
