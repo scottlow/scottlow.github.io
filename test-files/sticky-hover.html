@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        div {
+            position: absolute;
+            width: 800px;
+            height: 200px;
+            display: none;
+            background-color: red;
+            padding: 25px;
+        }
+
+        li {
+            display: inline;
+            margin: 10px;
+        }
+
+        li:hover div {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <li>
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + Anchor in Menu</a>
+        <div>
+            <a href="https://www.bing.com">Click Me</a>
+        </div>
+    </li>
+    <li>
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + No Anchor in Menu</a>
+        <div>
+        </div>
+    </li>
+    <li>
+        <span aria-haspopup="true">Span + Anchor in Menu</span>
+        <div>
+            <a href="https://www.bing.com">Click Me</a>
+        </div>
+    </li>
+    <li>
+        <span aria-haspopup="true">Span + No Anchor in Menu</span>
+        <div>
+        </div>
+    </li>
+</body>
+
+</html>

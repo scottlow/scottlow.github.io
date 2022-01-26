@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <style>
+        div {
+            position: absolute;
+            width: 800px;
+            height: 200px;
+            display: none;
+            background-color: red;
+            padding: 25px;
+        }
+
+        li {
+            display: inline;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <li onmouseover="showMenu('linkMenu')" onmouseout="hideMenu('linkMenu')">
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + Anchor in Menu</a>
+    </li>
+    <li onmouseover="showMenu('menu')" onmouseout="hideMenu('menu')">
+        <a aria-haspopup="true" href="https://www.bing.com">Anchor + No Anchor in Menu</a>
+    </li>
+    <li onmouseover="showMenu('linkMenu')" onmouseout="hideMenu('linkMenu')">
+        <span aria-haspopup="true">Span + Anchor in Menu</span>
+    </li>
+    <li onmouseover="showMenu('menu')" onmouseout="hideMenu('menu')">
+        <span aria-haspopup="true">Span + No Anchor in Menu</span>
+    </li>
+
+    <script>
+
+        createLinkMenu();
+        createMenu();
+
+        function showMenu(menuId) {
+            document.getElementById(menuId).style.display = 'block'
+        }
+
+        function hideMenu(menuId) {
+            document.getElementById(menuId).style.display = 'none'
+        }
+
+        function createLinkMenu() {
+            var divElem = document.createElement('div');
+            divElem.id = "linkMenu";
+            var anchorElm = document.createElement('a');
+            anchorElm.href = "https://www.bing.com";
+            anchorElm.innerText = "Click me"
+
+            divElem.appendChild(anchorElm);
+            document.body.appendChild(divElem);
+        }
+
+        function createMenu() {
+            var divElem = document.createElement('div');
+            divElem.id = "menu";
+
+            document.body.appendChild(divElem);
+        }
+    </script>
+</body>
+
+</html>
